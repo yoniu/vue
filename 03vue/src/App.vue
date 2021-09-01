@@ -22,11 +22,7 @@ export default {
   },
   data(){
     return {
-        todos: [
-            {id: 1, title: '学习', done: true},
-            {id: 2, title: '吃饭', done: false},
-            {id: 3, title: '睡觉', done: false},
-        ]
+        todos: JSON.parse(localStorage.getItem("todos")) || []
     }
   },
   methods: {
@@ -60,6 +56,14 @@ export default {
         type: 'success',
         message: '删除成功'
       });
+    }
+  },
+  watch: {
+    todos: {
+      deep: true,
+      handler(value){
+        localStorage.setItem('todos', JSON.stringify(value));
+      }
     }
   }
 }
