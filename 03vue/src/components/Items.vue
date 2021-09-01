@@ -38,6 +38,8 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-bottom: .3rem;
+        border-bottom: 1px solid #f0f0f0;
     }
     li .el-button{
         display: none;

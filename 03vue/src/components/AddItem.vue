@@ -1,6 +1,6 @@
 <template>
     <el-form-item>
-        <el-input v-model="item" placeholder="请输入内容" @change="add"></el-input>
+        <el-input v-model="item" placeholder="请输入内容后回车" @change="add"></el-input>
     </el-form-item>
 </template>
 

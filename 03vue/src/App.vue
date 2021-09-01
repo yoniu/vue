@@ -55,7 +55,11 @@ export default {
       });
     },
     deleteDoneEx(){
-      this.todos = this.todos.filter(i => i.done !== false);
+      this.todos = this.todos.filter(i => i.done == false);
+      this.$message({
+        type: 'success',
+        message: '删除成功'
+      });
     }
   }
 }
