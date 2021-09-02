@@ -5,3 +5,4 @@
 Todo List 案例
  - vue2.0
  - Element UI
+ - pug

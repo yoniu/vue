@@ -1,14 +1,11 @@
-<template>
-    <el-form-item>
-        <Items
-            v-for="todoObj in todos"
-            :key="todoObj.id"
-            :todoObj="todoObj"
-            :checkTodo="checkTodo"
-            :deleteTodo="deleteTodo"
-        />
-        <h2 v-if="!hasTodo">暂无项目</h2>
-    </el-form-item>
+<template lang="pug">
+    el-form-item
+        Items(
+            v-for='todoObj in todos'
+            :key='todoObj.id'
+            :todoObj='todoObj'
+        )/
+        h2(v-if='!hasTodo') 暂无项目
 </template>
 
 <script>
@@ -16,10 +13,9 @@
     export default {
         name: 'List',
         components: {Items},
-        props: ['todos','checkTodo',"deleteTodo"],
+        props: ['todos'],
         computed: {
             hasTodo(){
-                console.log(this.todos.length > 0);
                 return this.todos.length > 0;
             }
         }

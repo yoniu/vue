@@ -24,6 +24,9 @@
     "less": "^4.1.1",
     "less-loader": "^10.0.1",
     "node-sass": "^4.9.2",
+    "pug": "^3.0.2",
+    "pug-html-loader": "^1.1.5",
+    "pug-plain-loader": "^1.1.0",
     "sass-loader": "^7.0.3",
     "vue-cli-plugin-element": "~1.0.1",
     "vue-template-compiler": "^2.6.11"
